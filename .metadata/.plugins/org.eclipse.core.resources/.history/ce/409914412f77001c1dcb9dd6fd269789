@@ -1,0 +1,5 @@
+package tn.iit.dto;
+
+public class DemandeImpressionDto {
+
+}

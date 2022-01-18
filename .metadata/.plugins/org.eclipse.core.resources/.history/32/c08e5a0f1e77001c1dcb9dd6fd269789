@@ -1,0 +1,9 @@
+package tn.iit.repositories;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import tn.iit.models.Enseignant;
+
+public interface EnseignantRepo extends JpaRepository<Enseignant, Long> {
+
+}

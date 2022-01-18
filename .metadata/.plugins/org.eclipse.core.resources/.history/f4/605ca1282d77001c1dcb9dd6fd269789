@@ -1,0 +1,14 @@
+package tn.iit.services;
+
+import org.springframework.stereotype.Service;
+
+@Service
+public class DemandeImpService {
+
+	private DemandeImpService demandeImpService;
+
+	public DemandeImpService(DemandeImpService demandeImpService) {
+		this.demandeImpService = demandeImpService;
+	}
+
+}

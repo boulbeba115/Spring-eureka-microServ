@@ -1,0 +1,13 @@
+package tn.iit.web;
+
+import tn.iit.services.EnseignantService;
+
+public class EnseignantController {
+
+	private final EnseignantService EnseignantService;
+
+	public EnseignantController(tn.iit.services.EnseignantService enseignantService) {
+		EnseignantService = enseignantService;
+	}
+
+}

@@ -1,0 +1,8 @@
+package tn.iit.services;
+
+import tn.iit.repositories.EnseignantRepository;
+
+public class EnseignantService {
+
+	private final EnseignantRepository  enseignantRepo;
+}

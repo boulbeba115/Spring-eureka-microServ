@@ -1,0 +1,28 @@
+package tn.iit.services;
+
+import java.util.List;
+import java.util.Optional;
+
+import org.springframework.stereotype.Service;
+
+import tn.iit.models.DemandeImpression;
+import tn.iit.repositories.DemandeImpressionDao;
+
+@Service
+public class DemandeImpService {
+
+	private DemandeImpressionDao demandeImpService;
+
+	public DemandeImpService(DemandeImpressionDao demandeImpService) {
+		this.demandeImpService = demandeImpService;
+	}
+	
+	public List<DemandeImpression> getAllDemandesImp(){
+		return demandeImpService.findAll();
+	}
+	
+	public Optional<DemandeImpression> getDemandeById(long id) {
+		return demandeImpService.findById(id);
+	}
+
+}

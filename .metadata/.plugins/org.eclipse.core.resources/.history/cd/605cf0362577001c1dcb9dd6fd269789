@@ -1,0 +1,19 @@
+package tn.iit.services;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import tn.iit.repositories.EnseignantRepository;
+
+@Service
+public class EnseignantService {
+
+	private final EnseignantRepository  enseignantRepo;
+	
+	@Autowired
+	public EnseignantService(final EnseignantRepository enseignantRepo) {
+		this.enseignantRepo = enseignantRepo;
+	}
+	
+	
+}

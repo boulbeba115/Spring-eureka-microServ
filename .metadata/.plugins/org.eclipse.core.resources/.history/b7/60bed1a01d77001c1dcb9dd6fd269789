@@ -1,0 +1,34 @@
+package tn.iit.models;
+
+import javax.annotation.Generated;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+
+@Entity
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
+public class Enseignant {
+
+	@Id
+	@GeneratedValue(strategy = GenerationType.AUTO)
+	private long id;
+
+	private String nom;
+	private String prenom;
+	@Column(nullable = false, unique = true)
+	private String email;
+	@Column(nullable = false, unique = true)
+	private String cin;
+	private String password;
+
+}

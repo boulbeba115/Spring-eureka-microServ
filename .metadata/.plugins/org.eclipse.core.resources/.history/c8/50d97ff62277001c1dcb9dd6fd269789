@@ -1,0 +1,14 @@
+package tn.iit.models;
+
+import javax.persistence.Column;
+import javax.persistence.Embeddable;
+
+@Embeddable
+public class EnseignantGroupeKey {
+	
+	@Column(name = "enseignant_id")
+	private Long enseignantId;
+	
+	@Column(name = "groupe_id")
+	private Long eroupeId;
+}

@@ -1,0 +1,17 @@
+server:
+  port: 9900
+
+spring:
+  application:
+    name: API-GATEWAY
+  cloud:
+    gateway:
+      routes:
+      - id: ENSEIGNANT-SERVICE
+        uri: lb://ENSEIGNANT-SERVICE
+        predicates:
+        - Path=/enseignant-service/**
+      - id: IMPRESSION-SERVICE
+        uri: lb://IMPRESSION-SERVICE
+        predicates:
+        - Path=/impression-service/**

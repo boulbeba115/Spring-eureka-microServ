@@ -1,0 +1,19 @@
+package tn.iit.services;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import tn.iit.repositories.MatiereRepository;
+
+@Service
+public class MatiereService {
+
+	private final MatiereRepository matiereRepository;
+	
+	@Autowired
+	public MatiereService(MatiereRepository matiereRepository) {
+		this.matiereRepository = matiereRepository;
+	}
+	
+	
+}

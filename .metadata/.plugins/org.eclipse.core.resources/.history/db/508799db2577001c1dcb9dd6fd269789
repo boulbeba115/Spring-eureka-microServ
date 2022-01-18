@@ -1,0 +1,16 @@
+package tn.iit.web;
+
+import org.springframework.web.bind.annotation.RestController;
+
+import tn.iit.services.EnseignantService;
+
+@RestController
+public class EnseignantController {
+
+	private final EnseignantService EnseignantService;
+
+	public EnseignantController(final EnseignantService enseignantService) {
+		EnseignantService = enseignantService;
+	}
+
+}

@@ -1,0 +1,26 @@
+package tn.iit.models;
+
+import javax.persistence.EmbeddedId;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+import javax.persistence.MapsId;
+
+public class EnseignantGroupe {
+
+	@EmbeddedId
+	private EnseignantGroupeKey id;
+
+	@ManyToOne
+	@MapsId("enseignantId")
+	@JoinColumn(name = "enseignant_id")
+	private Enseignant enseignant;
+
+	@ManyToOne
+	@MapsId("groupeId")
+	@JoinColumn(name = "groupe_id")
+	private Groupe groupe;
+
+	@ManyToOne
+	private Matiere matiere;
+
+}

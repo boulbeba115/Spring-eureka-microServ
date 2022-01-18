@@ -1,0 +1,39 @@
+package tn.iit.services;
+
+import java.util.List;
+import java.util.Optional;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import tn.iit.models.Enseignant;
+import tn.iit.repositories.EnseignantRepository;
+
+@Service
+public class EnseignantService {
+
+	private final EnseignantRepository  enseignantRepo;
+	
+	@Autowired
+	public EnseignantService(final EnseignantRepository enseignantRepo) {
+		this.enseignantRepo = enseignantRepo;
+	}
+	
+	public List<Enseignant> getAllEnseignants() {
+		return enseignantRepo.findAll();
+	}
+	
+	public Optional<Enseignant> findEnseignantById(long id) {
+		return enseignantRepo.findById(id);
+	}
+	
+	public Optional<Enseignant> findEnseignantByCin(long id) {
+		return enseignantRepo.findById(id);
+	}
+	
+	public Enseignant saveEnseignant(Enseignant enseignant) {
+		return enseignantRepo.save(enseignant);
+	}
+	
+	
+}

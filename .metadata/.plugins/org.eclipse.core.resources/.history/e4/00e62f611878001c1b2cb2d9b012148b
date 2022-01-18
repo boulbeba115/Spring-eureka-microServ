@@ -1,0 +1,10 @@
+package tn.iit.dto;
+
+public class AuthResponse {
+	public enum Role {
+		ENSEINGANT,
+		Agent
+	}
+	private String cin;
+	private Role role = Role.ENSEINGANT;
+}

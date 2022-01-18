@@ -1,0 +1,10 @@
+package tn.iit.models;
+
+import javax.persistence.EmbeddedId;
+
+public class EnseignantGroupe {
+
+	@EmbeddedId
+	EnseignantGroupeKey id;
+
+}

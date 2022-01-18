@@ -1,0 +1,16 @@
+package tn.iit.dto;
+
+import java.util.Date;
+
+import tn.iit.models.DemandeImpression.EtatDemande;
+
+public class DemandeImpressionDto {
+
+	private long id;
+	private Enseignant enseignant;
+	private Matiere matiere;
+	private int nbCopie;
+	private Date dateArrivage;
+	private String ficherPdf;
+	private EtatDemande etatDemande;
+}

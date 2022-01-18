@@ -1,0 +1,21 @@
+package tn.iit.models;
+
+import java.io.Serializable;
+
+import javax.persistence.Column;
+import javax.persistence.Embeddable;
+
+@Embeddable
+public class EnseignantGroupeKey implements Serializable {
+	
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
+	@Column(name = "enseignant_id")
+	private Long enseignantId;
+	
+	@Column(name = "groupe_id")
+	private Long eroupeId;
+}

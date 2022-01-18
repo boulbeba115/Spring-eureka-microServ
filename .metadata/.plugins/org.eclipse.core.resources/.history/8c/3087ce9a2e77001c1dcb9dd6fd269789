@@ -1,0 +1,21 @@
+package tn.iit.web;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import tn.iit.services.DemandeImpService;
+
+@RestController
+@RequestMapping("")
+public class DemandeImpController {
+
+	private final DemandeImpService demandeImpService;
+	@Autowired
+	public DemandeImpController(DemandeImpService demandeImpService) {
+		super();
+		this.demandeImpService = demandeImpService;
+	}
+	
+	
+}

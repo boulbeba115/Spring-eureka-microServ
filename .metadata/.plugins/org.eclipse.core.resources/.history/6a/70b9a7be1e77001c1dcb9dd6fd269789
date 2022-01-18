@@ -1,0 +1,17 @@
+package tn.iit.services;
+
+import org.springframework.beans.factory.annotation.Autowired;
+
+import tn.iit.repositories.EnseignantRepository;
+
+public class EnseignantService {
+
+	private final EnseignantRepository  enseignantRepo;
+	
+	@Autowired
+	public EnseignantService(final EnseignantRepository enseignantRepo) {
+		this.enseignantRepo = enseignantRepo;
+	}
+	
+	
+}
